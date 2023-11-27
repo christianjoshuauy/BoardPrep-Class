@@ -1,0 +1,138 @@
+.auth {
+  display: flex;
+  height: 70vh;
+  align-items: center;
+  padding: 0 2vw;
+}
+
+.card {
+  width: 25vw;
+  margin: auto;
+  background-color: rgba(3, 3, 3, 0.75);
+  border-radius: 8px;
+  color: #fff;
+  text-align: center;
+  padding: 5vh 3vw;
+}
+
+.card h3 {
+  text-align: left;
+  text-transform: uppercase;
+  letter-spacing: 0.2vw;
+  margin-bottom: 3vh;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  transition: width 0.5s ease, height 0.5s ease;
+}
+
+input, select {
+  display: block;
+  width: 100%;
+  height: 4.5vh;
+  padding: 10px;
+  border: 1px solid #ffffff7e;
+  color: #fff;
+  background-color: transparent;
+  border-radius: 10px;
+  box-sizing: border-box;
+  margin-bottom: 15px;
+}
+
+select option {
+  color: #000000;
+}
+
+.card-start {
+  text-align: left;
+  margin: 0 auto;
+}
+
+::placeholder {
+  color: #ffffff7e;
+}
+
+.signup-button {
+  width: 100%;
+  margin-top: 2vh;
+  padding: 1vh 1.5vw;
+  border-radius: 100px;
+  border: 1px solid #fff;
+  background: transparent;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.1vw;
+  transition: all 0.3s ease;
+}
+
+.signup-button:hover {
+  background-color: #fff;
+  color: #201c1c;
+}
+
+.p-button {
+  border: none;
+  background-color: transparent;
+  color: inherit;
+  text-shadow: none;
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+}
+
+form p {
+  margin-top: 2vh;
+}
+
+form input {
+  opacity: 0;
+}
+
+form input:nth-child(1) {
+  animation: slideup 1s ease;
+  animation-fill-mode: forwards;
+}
+
+form input:nth-child(2) {
+  animation: slideup 1s ease 0.2s;
+  animation-fill-mode: forwards;
+}
+
+form input:nth-child(3) {
+  animation: slideup 1s ease 0.4s;
+  animation-fill-mode: forwards;
+}
+
+form input:nth-child(4) {
+  animation: slideup 1s ease 0.6s;
+  animation-fill-mode: forwards;
+}
+
+form input:nth-child(5) {
+  animation: slideup 1s ease 0.8s;
+  animation-fill-mode: forwards;
+}
+
+form input:nth-child(6) {
+  animation: slideup 1s ease 1s;
+  animation-fill-mode: forwards;
+}
+
+form select {
+  animation: slideup 1s ease 1.2s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slideup {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

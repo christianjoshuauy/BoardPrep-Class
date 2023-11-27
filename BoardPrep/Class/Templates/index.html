@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your Classes</title>
+      {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/class.css' %}">
+    <script src="{% static 'js/class.js' %}"></script>
+  </head>
+  <body>
+    <div class="class-background">
+      <header>
+        <h1>MY CLASSES</h1>
+        <div class="profile-pic2">
+          <img src="{% static 'img/auth-background2.jpg' %}" class="logo" alt="RILL">
+        </div>
+      </header>
+      <div class="class-container">
+        {% for class in classes %}
+          <div class="class-card">
+            <img src="{% static 'img/diff.jpg' %}" class="logo" alt="RILL">
+            <div class="card-text">
+              <p class="card-duration">1 - 28 July 2022</p>
+              <p class="card-title">{{ class.className }}</p>
+              <p class="card-description">
+                {{ class.classDescription }}
+              </p>
+              <button class="card-button">Classroom</button>
+            </div>
+          </div>
+        {% endfor %}
+        <button class="create-classbtn" onclick="openModal()">
+            Create Class +
+        </button>
+        <div id="modal" class="modal">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1>Create Class</h1>
+              <span class="close" onclick="closeModal()">&times;</span>
+            </div>
+            <form method="post">
+                {% csrf_token %}
+                {{ form }}
+                <button type="submit" class="card-button">Create</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

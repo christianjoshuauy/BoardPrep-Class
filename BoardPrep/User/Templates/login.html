@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>BoardPrep</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/header.css' %}">
+    <link rel="stylesheet" href="{% static 'css/footer.css' %}">
+    <link rel="stylesheet" href="{% static 'css/loginn.css' %}">
+    <link rel="icon" href="{% static 'img/boardprep.png' %}" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .auth-background {
+          background: url("{% static 'img/auth-background2.jpg' %}") no-repeat center center/cover;
+          height: 100vh;
+        }
+    </style>
+    <script src="{% static 'js/form.js' %}"></script>
+</head>
+
+<body>
+    <div class="auth-background">
+        <header>
+            <img src="{% static 'img/boardprep.png' %}" class="logo" alt="RILL" width="150">
+            <nav></nav>
+            <div class="searchbox">
+            </div>
+        </header>
+        <main class="auth">
+            <div class="card">
+                <div class="card-start">
+                    {% if error_message %}
+                        <p class="error-message">{{ error_message }}</p>
+                    {% endif %}
+                    <h3 id="auth-title">Register</h3>
+                    <form id="register-form" method="POST">
+                        {% csrf_token %}
+                        {{ register_form }}
+                        <button type="submit" name="register" class="signup-button">Sign Up</button>
+                        <p>Already have an account? <button type="button" id="sign-in-button" class="p-button"
+                                                            onclick="toggleForm()">Sign In</button></p>
+                    </form>
+                    <form id="login-form" method="POST" style="display: none;">
+                        {% csrf_token %}
+                        {{ login_form }}
+                        <button type="submit" name="login" class="signup-button">Sign In</button>
+                        <p>Don't have an account? <button type="button" id="sign-up-button" class="p-button"
+                                                          onclick="toggleForm()">Sign Up</button></p>
+                    </form>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>

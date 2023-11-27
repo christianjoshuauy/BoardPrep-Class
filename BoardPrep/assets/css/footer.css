@@ -1,0 +1,139 @@
+.footer-white {
+  display: flex;
+  align-items: center;
+  padding: 0 5vw;
+  color: #201c1c;
+  height: 20vh;
+}
+
+.footer-black {
+  display: flex;
+  align-items: center;
+  padding: 0 5vw;
+  background: #080404;
+  color: #fff;
+  height: 20vh;
+}
+
+.footer-fashion {
+  margin-top: 2vh;
+  height: 18vh;
+  overflow: hidden;
+}
+
+.footer-fashion img {
+  object-fit: scale-down;
+}
+
+.footer-nav {
+  margin-left: 6vw;
+}
+
+.footer-white .footer-nav ul li {
+  margin-bottom: 0.75vh;
+  list-style: none;
+  cursor: pointer;
+  color: #4e4e4e;
+  transition: all 0.3 ease;
+}
+
+.footer-black .footer-nav ul li {
+  margin-bottom: 0.75vh;
+  list-style: none;
+  cursor: pointer;
+  color: #9c9c9c;
+  transition: all 0.3 ease;
+}
+
+.footer-white .footer-nav ul li:first-child {
+  font-weight: 700;
+  color: #201c1c;
+}
+
+.footer-black .footer-nav ul li:first-child {
+  font-weight: 700;
+  color: #fff;
+}
+
+.footer-white .footer-nav ul li:hover {
+  color: #201c1c;
+}
+
+.footer-black .footer-nav ul li:hover {
+  color: #fff;
+}
+
+.copyright {
+  font-size: 12px;
+  align-self: last baseline;
+}
+
+.footer-nav ul li a {
+  text-decoration: none;
+}
+
+.fa {
+  background: #4e4e4e;
+  color: white;
+  padding: 5px;
+  border-radius: 50%;
+  transition: all 0.3 ease;
+}
+
+.footer-black .fa {
+  background: #9c9c9c;
+  color: #080404;
+  padding: 5px;
+  border-radius: 50%;
+  transition: all 0.3 ease;
+}
+
+.fa-facebook {
+  width: 25px;
+}
+
+.fa:hover {
+  background: #201c1c;
+}
+
+.footer-black .fa:hover {
+  background: #fff;
+}
+
+@media (max-width: 1500px) {
+  .footer-white,
+  .footer-black {
+    height: 20vh;
+  }
+
+  .footer-fashion {
+    height: 20vh;
+  }
+
+  .footer-white .footer-nav ul li,
+  .footer-black .footer-nav ul li {
+    margin-bottom: 0.5vh;
+    font-size: 15px;
+  }
+
+  .footer-white .footer-nav ul li:first-child,
+  .footer-black .footer-nav ul li:first-child {
+    font-size: 14px;
+  }
+
+  .footer-nav {
+    margin-left: 3vw;
+  }
+
+  .footer-black .fa {
+    padding: 3px;
+  }
+
+  .fa-facebook {
+    width: 20px;
+  }
+
+  .copyright {
+    font-size: 13px;
+  }
+}
